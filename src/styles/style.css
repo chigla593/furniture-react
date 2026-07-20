@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ---------- Header / Nav ---------- */
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header section > div {
+  cursor: pointer;
+  max-width: 1200px;
+  text-decoration: none;
+}
+ 
+header section a {
+  text-decoration: none;
+}
+
+header section h2 {
+  margin-left: 120px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #054C73;
+  text-decoration: none;
+}
+
+header section nav ul {
+  display: flex;
+  gap: 60px;
+}
+
+header section nav ul .margin-right {
+  margin-right: 120px;
+}
+
+header section nav ul li a {
+  font-weight: 600;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+header section nav ul li a:hover {
+  color: #F2A71B;
+}
+
+
+.herosec {
+  background: url('../assets/images/Mask-Group.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.herosec > div {
+  background-color: #DFE9F4;
+  width: 644px;
+  height: 444px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  margin-right: 90px;
+  padding: 38px 46px 42px 40px;
+}
+
+.herosec span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 3px;
+}
+
+.herosec h2 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 65px;
+  color: #054C73;
+  margin-top: 20px;
+}
+
+.herosec p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 39px;
+  color: #333333;
+  margin-top: 20px;
+}
+
+.herosec button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  background-color: #054C73;
+  width: 230px;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+/* ---------- Header info / guarantees bar ---------- */
+.headerinfo {
+  display: flex;
+  flex-direction: row;
+  background-color: #F2F5FF;
+  width: 100%;
+  height: 150px;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+}
+
+.headerinfo > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.headerinfo > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerinfo div.test {
+  margin-left: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerinfo div.test p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.headerinfo div.test span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.headerinfo div.gap {
+  margin-left: 124px;
+}
+
+/* ---------- Main ---------- */
+main {
+  margin-top: 60px;
+}
+
+/* Inspiration Collection */
+.Inspiration-Collection > div h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.Inspiration-Collection > div p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Inspiration-Collection-images {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.Inspiration-Collection-images .image1 {
+  margin-top: 38px;
+}
+
+.Inspiration-Collection-images .image2 {
+  margin-bottom: 38px;
+}
+
+.Inspiration-Collection-images .image3 {
+  margin-top: 38px;
+}
+
+/* Beautify Your Space */
+.Beautify-Your-Space {
+  margin-top: 60px;
+  gap: 62px;
+  align-items: center;
+  height: 874px;
+  display: flex;
+  justify-content: center;
+  background-color: #F2F5FF;
+}
+
+.Beautify-Your-Space div.left h2 {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Beautify-Your-Space div.left p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+  max-width: 514px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Beautify-Your-Space div.left button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  background-color: #054C73;
+  width: 230px;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.Beautify-Your-Space div.right img {
+  position: relative;
+  z-index: 1;
+}
+
+.Beautify-Your-Space div.right .deco {
+  z-index: 0;
+  position: relative;
+  left: -4px;
+  top: -230px;
+}
+
+/* Browse The Range */
+.Browse-The-Range {
+  margin-top: 60px;
+}
+
+.Browse-The-Range > div h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Browse-The-Range > div p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Browse-The-Range-images {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Browse-The-Range-images div p {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* How It Works */
+.How-It-Works {
+  border-top: solid #D7D6D6 1px;
+  margin-top: 60px;
+  padding-top: 60px;
+  margin-bottom: 197px;
+}
+
+.How-It-Works > div h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.How-It-Works > div p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.How-It-Works-Images {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.How-It-Works-Images div {
+  max-width: 381px;
+}
+
+.How-It-Works-Images div h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.How-It-Works-Images div p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Join Our Mailing List */
+.Join-Our-Mailing-List {
+  background-color: #F2F5FF;
+  padding-bottom: 60px;
+}
+
+.Join-Our-Mailing-List > div:first-child {
+  padding-top: 60px;
+}
+
+.Join-Our-Mailing-List h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.Join-Our-Mailing-List > div:first-child p {
+  max-width: 514px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.email-form-container {
+  display: flex;
+  gap: 0;
+  margin-top: 40px;
+  justify-content: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #054C73 1px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+input[type="email"] {
+  height: 70px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+  min-width: 200px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type="email"]::placeholder {
+  color: #bbb;
+}
+
+input[type="email"]:focus {
+  background-color: #fafafa;
+}
+
+button[type="submit"] {
+  padding: 12px 32px;
+  background-color: #054C73;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #043a54;
+}
+
+button[type="submit"]:active {
+  background-color: #032f44;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #03344F;
+  height: 386px;
+  display: flex;
+}
+
+footer div.text {
+  margin-left: 120px;
+  padding-top: 49px;
+  width: 400px;
+}
+
+footer div.text span {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer div.text p {
+  margin-top: 34px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 21px;
+}
+
+footer > div:last-child {
+  margin-left: auto;
+  margin-right: 134px;
+  padding-top: 49px;
+  width: 763px;
+}
+
+footer > div:last-child > span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.instagram-shop-images {
+  display: flex;
+  gap: 21px;
+}
