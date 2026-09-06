@@ -1,0 +1,78 @@
+.range {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.range h2 {
+  font-size: 36px;
+  color: #054C73;
+  font-weight: 700;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.slide {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  width: 400px;
+}
+
+.slide img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide p {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.arrow {
+  background: #F2F5FF;
+  border: 1px solid #054C73;
+  color: #054C73;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.arrow:hover {
+  background: #054C73;
+  color: #fff;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #D7D6D6;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dotActive {
+  background: #054C73;
+}

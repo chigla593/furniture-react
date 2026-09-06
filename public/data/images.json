@@ -1,0 +1,36 @@
+{
+  "heroBackground": {
+    "src": "/images/hero-background.png",
+    "alt": "Living room with rattan chair, plant, and patterned rug"
+  },
+  "guarantees": {
+    "freeDelivery": { "src": "/icons/free-delivery.svg", "alt": "truck" },
+    "support": { "src": "/icons/support.svg", "alt": "24/7 support" },
+    "authenticity": { "src": "/icons/authenticity.png", "alt": "shield check" }
+  },
+  "inspirationCollection": [
+    { "src": "/images/inspiration-collection-1.webp", "alt": "Gold plant stand with succulents and a clock" },
+    { "src": "/images/inspiration-collection-2.webp", "alt": "White cabinet with beanbag chair and patterned rug" },
+    { "src": "/images/inspiration-collection-3.webp", "alt": "Black cone pendant lamp" }
+  ],
+  "beautifyYourSpace": {
+    "photo": { "src": "/images/beautify-your-space.webp", "alt": "Woman in a straw hat looking to the side" },
+    "decoration": { "src": "/images/green-half-circle.webp", "alt": "Green decorative half circle" }
+  },
+  "browseTheRange": [
+    { "name": "Dining", "src": "/images/dining.webp", "alt": "Dining room styling with wood tray" },
+    { "name": "Living", "src": "/images/living.webp", "alt": "Living room couch with cushions" },
+    { "name": "Bedroom", "src": "/images/bedroom.webp", "alt": "Bedroom with wood shutters and rattan plant stand" }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Purchase Securely", "src": "/images/purchase-securely.webp", "alt": "Man holding a credit card next to a laptop" },
+    { "step": 2, "title": "Ships From Warehouse", "src": "/images/ships-from-warehouse.webp", "alt": "Warehouse building exterior" },
+    { "step": 3, "title": "Style Your Room", "src": "/images/style-your-room.webp", "alt": "Pendant lamp above a plant stand" }
+  ],
+  "instagramShop": [
+    { "src": "/images/instagram-shop-1.webp", "alt": "Shelf with toy house and plush toys" },
+    { "src": "/images/instagram-shop-2.webp", "alt": "Woven basket and gingham bedding" },
+    { "src": "/images/instagram-shop-3.webp", "alt": "Macrame wall hanging" },
+    { "src": "/images/instagram-shop-4.webp", "alt": "White kitchen with wood countertop" }
+  ]
+}

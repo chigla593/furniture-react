@@ -1,0 +1,52 @@
+.section {
+  margin-top: 60px;
+  gap: 62px;
+  align-items: center;
+  height: 874px;
+  display: flex;
+  justify-content: center;
+  background-color: #F2F5FF;
+}
+
+.left {
+  max-width: 480px;
+}
+
+.section h2 {
+  font-size: 36px;
+  color: #054C73;
+  font-weight: 700;
+}
+
+.section p {
+  margin-top: 20px;
+  line-height: 28px;
+}
+
+.section button {
+  margin-top: 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 50px;
+  cursor: pointer;
+  background-color: #054C73;
+  color: white;
+  border: none;
+}
+
+.right {
+  position: relative;
+}
+
+.right img:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.deco {
+  z-index: 0;
+  position: absolute;
+  left: -4px;
+  top: -230px;
+}

@@ -1,0 +1,49 @@
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero > div {
+  background-color: #DFE9F4;
+  width: 644px;
+  height: 444px;
+  border-radius: 10px;
+  margin-right: 90px;
+  padding: 38px 46px 42px 40px;
+}
+
+.hero span {
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.hero h2 {
+  font-size: 52px;
+  color: #054C73;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 39px;
+}
+
+.hero button {
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 25px 72px;
+  cursor: pointer;
+  background-color: #054C73;
+  color: white;
+  border: none;
+  margin-top: 30px;
+}

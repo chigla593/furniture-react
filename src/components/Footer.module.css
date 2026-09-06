@@ -1,0 +1,49 @@
+.footer {
+  background-color: #03344F;
+  min-height: 386px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.text {
+  margin-left: 120px;
+  padding-top: 49px;
+  width: 400px;
+}
+
+.title,
+.follow {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.text p {
+  margin-top: 34px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  margin-bottom: 21px;
+}
+
+.instagram {
+  margin-left: auto;
+  margin-right: 134px;
+  padding-top: 49px;
+  width: 763px;
+}
+
+.instagram > span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  margin-top: 20px;
+}

@@ -1,0 +1,60 @@
+.section {
+  border-top: solid #D7D6D6 1px;
+  margin-top: 100px;
+  padding-top: 60px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  color: #054C73;
+  font-weight: 700;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.images div {
+  max-width: 381px;
+}
+
+.stepImageWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.stepImageWrap img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.stepBadge {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1B1B1B;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #054C73;
+}
+
+.images p {
+  margin-top: 10px;
+  color: #555;
+}
