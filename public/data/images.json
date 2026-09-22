@@ -18,9 +18,9 @@
     "decoration": { "src": "/images/green-half-circle.webp", "alt": "Green decorative half circle" }
   },
   "browseTheRange": [
-    { "name": "Dining", "src": "/images/dining.webp", "alt": "Dining room styling with wood tray" },
-    { "name": "Living", "src": "/images/living.webp", "alt": "Living room couch with cushions" },
-    { "name": "Bedroom", "src": "/images/bedroom.webp", "alt": "Bedroom with wood shutters and rattan plant stand" }
+    {"src": "/images/tv-unit.webp", "alt": "TV unit with a fully decorated shelf and other things"},
+    {"src": "/images/monsoon-sale-dining-set-banner.webp", "alt": "Monsoon sale dining set banner"},
+    {"src": "/images/wooden-sofa-set-city-view-living-room.webp", "alt": "Wooden sofa set in a city view living room"}
   ],
   "howItWorks": [
     { "step": 1, "title": "Purchase Securely", "src": "/images/purchase-securely.webp", "alt": "Man holding a credit card next to a laptop" },
@@ -32,5 +32,21 @@
     { "src": "/images/instagram-shop-2.webp", "alt": "Woven basket and gingham bedding" },
     { "src": "/images/instagram-shop-3.webp", "alt": "Macrame wall hanging" },
     { "src": "/images/instagram-shop-4.webp", "alt": "White kitchen with wood countertop" }
+  ],
+   "GalleryPhotos": [
+    {"src": "/images/living-room-sofa.webp", "alt": "Living room with a sofa and other furniture" },
+    {"src": "/images/tv-unit.webp", "alt": "TV unit with a fully decorated shelf and other things"},
+    {"src": "/images/beige-louge.webp", "alt": "a dark blue sofa with miniature guy sitting on it"},
+    {"src": "/images/mustard-accent-chair-with-side-table.webp", "alt": "a mustard accent chair with a side table and a plant on it"},
+    {"src": "/images/round-marble-wood-coffee-table.webp", "alt": "a round marble and wood coffee table"},
+    {"src": "/images/teal-chaise-sofa-with-red-lamp.webp", "alt": "a teal chaise sofa with a red lamp"},
+    {"src": "/images/banana-leaf-print-accent-chair.webp", "alt": "a banana leaf print accent chair"},
+    {"src": "/images/burgundy-velvet-round-ottoman-table.webp", "alt": "a burgundy velvet round ottoman table"},
+    {"src": "/images/caramel-velvet-lounge-chair-ottoman.webp", "alt": "a caramel velvet lounge chair with an ottoman"},
+    {"src": "/images/coastal-waterfront-living-room-banner.webp", "alt": "Coastal waterfront living room banner"},
+    {"src": "/images/dining-room-paper-lantern-pendants.webp", "alt": "Dining room with paper lantern pendants"},
+    {"src": "/images/flame-mahogany-six-drawer-dresser.webp", "alt": "Flame mahogany six-drawer dresser"},
+    {"src": "/images/monsoon-sale-dining-set-banner.webp", "alt": "Monsoon sale dining set banner"},
+    {"src": "/images/wooden-sofa-set-city-view-living-room.webp", "alt": "Wooden sofa set in a city view living room"}
   ]
 }
