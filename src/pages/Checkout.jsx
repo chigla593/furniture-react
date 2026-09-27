@@ -66,6 +66,10 @@ function OrderSummary({ item }) {
   )
 }
 
+function generateOrderNumber() {
+  return `FUR-${Date.now().toString().slice(-8)}`
+}
+
 export default function Checkout() {
   const [form, setForm] = useState(emptyForm)
   const [errors, setErrors] = useState({})
@@ -82,8 +86,7 @@ export default function Checkout() {
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
-    const orderNumber = `FUR-${Date.now().toString().slice(-8)}`
-    setOrder({ ...form, orderNumber, item: demoItem })
+    setOrder({ ...form, orderNumber: generateOrderNumber(), item: demoItem })
   }
 
   if (order) {
@@ -99,7 +102,6 @@ export default function Checkout() {
       </main>
     )
   }
-
   return (
     <main className={`${page.page} ${styles.formPage}`}>
       <h1>Checkout</h1>
@@ -128,4 +130,5 @@ export default function Checkout() {
       </form>
     </main>
   )
+ 
 }
