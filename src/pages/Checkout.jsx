@@ -3,16 +3,7 @@ import { Link } from 'react-router-dom'
 import page from '../styles/page.module.css'
 import styles from './Checkout.module.css'
 
-// There's no real cart/product-selection flow yet (the site has no
-// per-product "add to cart" anywhere), so this checkout works off a
-// single demo line item just so the page has something concrete to
-// summarize and total. Swap `demoItem` for real cart state once that
-// exists.
-const demoItem = {
-  name: 'Asgaard Sofa',
-  price: 250000, // stored in cents to avoid float rounding issues
-  qty: 1,
-}
+const demoItem = { name: 'Asgaard Sofa', price: 250000, qty: 1 }
 
 const emptyForm = {
   fullName: '',
@@ -23,27 +14,62 @@ const emptyForm = {
   country: '',
 }
 
+
+const fields = [
+  { name: 'fullName', label: 'Full name' },
+  { name: 'email', label: 'Email', type: 'email' },
+  { name: 'address', label: 'Address' },
+  { name: 'city', label: 'City' },
+  { name: 'zip', label: 'Postal code' },
+  { name: 'country', label: 'Country' },
+]
+
 function formatMoney(cents) {
   return (cents / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 }
 
 function validate(form) {
   const errors = {}
-  if (!form.fullName.trim()) errors.fullName = 'Required'
-  if (!form.email.trim()) errors.email = 'Required'
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Enter a valid email'
-  if (!form.address.trim()) errors.address = 'Required'
-  if (!form.city.trim()) errors.city = 'Required'
-  if (!form.zip.trim()) errors.zip = 'Required'
-  else if (!/^[a-zA-Z0-9\- ]{3,10}$/.test(form.zip)) errors.zip = 'Enter a valid postal code'
-  if (!form.country.trim()) errors.country = 'Required'
-  return errors
+  for (const { name, label } of fields) {
+    if (!form[name].trim()) errors[name] = 'Required'
+  }
+if (form.zip.trim().length < 3 || form.zip.trim().length > 10) {
+  errors.zip = 'Enter a valid postal code'
+}
+   return errors
+  }
+
+
+
+function Field({ name, label, type = 'text', form, errors, onChange }) {
+  return (
+    <label>
+      {label}
+      <input name={name} type={type} value={form[name]} onChange={onChange} />
+      {errors[name] && <span className={styles.fieldError}>{errors[name]}</span>}
+    </label>
+  )
+}
+
+function OrderSummary({ item }) {
+  return (
+    <div className={styles.summary}>
+      <div className={styles.summaryRow}>
+        <span>{item.name} × {item.qty}</span>
+        <span>{formatMoney(item.price * item.qty)}</span>
+      </div>
+      <div className={`${styles.summaryRow} ${styles.summaryRowTotal}`}>
+        <span>Total</span>
+        <span>{formatMoney(item.price * item.qty)}</span>
+      </div>
+    </div>
+  )
 }
 
 export default function Checkout() {
   const [form, setForm] = useState(emptyForm)
   const [errors, setErrors] = useState({})
-  const [order, setOrder] = useState(null) // set once "placed"
+  const [order, setOrder] = useState(null)
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -56,12 +82,6 @@ export default function Checkout() {
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
-    // No backend/payment processor is wired up here — this is a
-    // client-only confirmation so the flow has an ending. Plugging in
-    // real payment (Stripe, etc.) means: collect payment details via
-    // that provider's SDK (never handle raw card numbers yourself),
-    // POST the order to your backend, and only show the confirmation
-    // once that call succeeds.
     const orderNumber = `FUR-${Date.now().toString().slice(-8)}`
     setOrder({ ...form, orderNumber, item: demoItem })
   }
@@ -71,22 +91,10 @@ export default function Checkout() {
       <main className={page.page}>
         <h1>Order Confirmed</h1>
         <p>Thanks, {order.fullName.split(' ')[0]} — order <strong>{order.orderNumber}</strong> is on its way.</p>
-
-        <div className={styles.summary}>
-          <div className={styles.summaryRow}>
-            <span>{order.item.name} × {order.item.qty}</span>
-            <span>{formatMoney(order.item.price * order.item.qty)}</span>
-          </div>
-          <div className={`${styles.summaryRow} ${styles.summaryRowTotal}`}>
-            <span>Total</span>
-            <span>{formatMoney(order.item.price * order.item.qty)}</span>
-          </div>
-        </div>
-
+        <OrderSummary item={order.item} />
         <p className={styles.shipTo}>
           Shipping to {order.address}, {order.city} {order.zip}, {order.country}
         </p>
-
         <Link to="/" className={styles.backLink}>Back to home</Link>
       </main>
     )
@@ -95,56 +103,20 @@ export default function Checkout() {
   return (
     <main className={`${page.page} ${styles.formPage}`}>
       <h1>Checkout</h1>
-
-      <div className={styles.summary}>
-        <div className={styles.summaryRow}>
-          <span>{demoItem.name} × {demoItem.qty}</span>
-          <span>{formatMoney(demoItem.price * demoItem.qty)}</span>
-        </div>
-        <div className={`${styles.summaryRow} ${styles.summaryRowTotal}`}>
-          <span>Total</span>
-          <span>{formatMoney(demoItem.price * demoItem.qty)}</span>
-        </div>
-      </div>
+      <OrderSummary item={demoItem} />
 
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
-        <label>
-          Full name
-          <input name="fullName" value={form.fullName} onChange={handleChange} />
-          {errors.fullName && <span className={styles.fieldError}>{errors.fullName}</span>}
-        </label>
-
-        <label>
-          Email
-          <input name="email" type="email" value={form.email} onChange={handleChange} />
-          {errors.email && <span className={styles.fieldError}>{errors.email}</span>}
-        </label>
-
-        <label>
-          Address
-          <input name="address" value={form.address} onChange={handleChange} />
-          {errors.address && <span className={styles.fieldError}>{errors.address}</span>}
-        </label>
+        {fields.slice(0, 3).map((f) => (
+          <Field key={f.name} {...f} form={form} errors={errors} onChange={handleChange} />
+        ))}
 
         <div className={styles.formRow}>
-          <label>
-            City
-            <input name="city" value={form.city} onChange={handleChange} />
-            {errors.city && <span className={styles.fieldError}>{errors.city}</span>}
-          </label>
-
-          <label>
-            Postal code
-            <input name="zip" value={form.zip} onChange={handleChange} />
-            {errors.zip && <span className={styles.fieldError}>{errors.zip}</span>}
-          </label>
+          {fields.slice(3, 5).map((f) => (
+            <Field key={f.name} {...f} form={form} errors={errors} onChange={handleChange} />
+          ))}
         </div>
 
-        <label>
-          Country
-          <input name="country" value={form.country} onChange={handleChange} />
-          {errors.country && <span className={styles.fieldError}>{errors.country}</span>}
-        </label>
+        <Field {...fields[5]} form={form} errors={errors} onChange={handleChange} />
 
         <p className={styles.paymentNote}>
           Payment isn't wired up yet — placing an order here just confirms
